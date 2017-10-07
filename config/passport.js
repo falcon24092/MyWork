@@ -1,6 +1,7 @@
 import passport from 'passport';
 import mongoose from 'mongoose';
 
+
 module.exports = () => {
        var User = mongoose.model('User');
 
@@ -16,4 +17,6 @@ module.exports = () => {
        }); 
 
        require('./strategies/local')();
+       require('./strategies/google')();
+       
 }
